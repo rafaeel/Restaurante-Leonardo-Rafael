@@ -30,6 +30,13 @@ class QualificacoesController < ApplicationController
       format.html # new.html.erb
       format.json { render json: @qualificacao }
     end
+    if params[:cliente]
+     @qualificacao.cliente = Cliente.find(params[:cliente])
+    end
+    if params[:restaurante]
+      @qualificacao.restaurante = Restaurantes.find(params[:Restaurantes])
+    end
+ 
   end
 
   # GET /qualificacoes/1/edit
@@ -80,11 +87,7 @@ class QualificacoesController < ApplicationController
       format.json { head :no_content }
     end
   end
-  if params[:cliente]
-    @qualificacao.cliente = Cliente.find(params[:cliente])
-  end
-  if params[:restaurante]
-    @qualificacao.restaurante = Restaurantes.find(params[:restaurante])
-  end
+
+ 
 
 end

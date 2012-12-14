@@ -22,11 +22,11 @@
 
   </div>
   <div class="field">
-    <% if @qualificacao.restaurante %>
+    <% if @qualificacao.restaurantes %>
       <%= f.hidden_field 'restaurante_id' %>
     <% else %>
       <p><%= f.label :restaurante_id %><br />
-        <%= f.collection_select(:restaurante_id, Restaurante.order('nome'),
+        <%= f.collection_select(:restaurante_id, Restaurantes.order('nome'),
                       :id, :nome, {:prompt => true}) %></p>
     <% end %>
 

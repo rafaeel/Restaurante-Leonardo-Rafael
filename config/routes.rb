@@ -1,4 +1,6 @@
 Restaurante::Application.routes.draw do
+  resources :comentarios
+
   resources :qualificacoes
 
   resources :clientes

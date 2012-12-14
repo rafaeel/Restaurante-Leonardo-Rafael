@@ -14,20 +14,6 @@
 		<%= @restaurante.especialidade %>
 	</p>
 
-	<p>
-		<b> Nota Média: </b>
-		<%= @restaurante.qualificacao.average(:nota) %>
-	</p>
-
-	<p>
-		<b> Qualificações: </b>
-		<%= @restaurante.qualificacoes.count %>
-	</p>
-
-	<p>
-		<b> Média de valores </b>
-		<%= @restaurante.qualificacoes.average(:valor_gasto) %>
-	</p>
 
 
 	<%= link_to "Qualificar este restaurante",
@@ -38,3 +24,7 @@
 
 	<%= link_to 'Editar', action: 'edit', id: @restaurante  %>
 	<%= link_to 'Voltar', action: 'index'  %>
+	<% unless @restaurante.comentarios.empty?%>
+		<%= comentarios @restaurante %>
+	<% end %>
+	<%= novo_comentario(@restaurante) %>
