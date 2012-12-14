@@ -3,15 +3,38 @@
 	<h1>Exibindo Restaurante</h1>
 	<p>
 	<b>Nome: </b>
-	<%= @restaurante.nome %>
+		<%= @restaurante.nome %>
 	</p>
 	<p>
-	<b>Endereço: </b>
-	<%= @restaurante.endereco %>
+		<b>Endereço: </b>
+		<%= @restaurante.endereco %>
 	</p>
 	<p>
-	<b>Especialidade: </b>
-	<%= @restaurante.especialidade %>
+		<b>Especialidade: </b>
+		<%= @restaurante.especialidade %>
 	</p>
+
+	<p>
+		<b> Nota Média: </b>
+		<%= @restaurante.qualificacao.average(:nota) %>
+	</p>
+
+	<p>
+		<b> Qualificações: </b>
+		<%= @restaurante.qualificacoes.count %>
+	</p>
+
+	<p>
+		<b> Média de valores </b>
+		<%= @restaurante.qualificacoes.average(:valor_gasto) %>
+	</p>
+
+
+	<%= link_to "Qualificar este restaurante",
+		:controller => "qualificacoes",
+		:action => "new",
+		:restaurante => @restaurante %>
+
+
 	<%= link_to 'Editar', action: 'edit', id: @restaurante  %>
 	<%= link_to 'Voltar', action: 'index'  %>

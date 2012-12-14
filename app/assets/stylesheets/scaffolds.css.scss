@@ -1,9 +1,10 @@
 body {
-  background-color: #fff;
-  color: #333;
+  background-color: #00ffff;
+  color: #000;
   font-family: verdana, arial, helvetica, sans-serif;
-  font-size: 13px;
+  font-size: 14px;
   line-height: 18px;
+  aling: center;
 }
 
 p, ol, ul, td {
@@ -14,7 +15,7 @@ p, ol, ul, td {
 
 pre {
   background-color: #eee;
-  padding: 10px;
+  padding: 20px;
   font-size: 11px;
 }
 
@@ -24,8 +25,8 @@ a {
     color: #666;
   }
   &:hover {
-    color: #fff;
-    background-color: #000;
+    color: #000fff;
+    background-color: #00ffff;
   }
 }
 

@@ -14,7 +14,7 @@
 <% @qualificacoes.each do |qualificacao| %>
   <tr>
     <td><%= qualificacao.cliente.nome %></td>
-    <td><%= qualificacao.restaurantes.nome %></td>
+    <td><%= qualificacao.restaurante_id  %></td>
     <td><%= qualificacao.nota %></td>
     <td><%= qualificacao.valor_gasto %></td>
     <td><%= link_to 'Show', qualificacao %></td>
