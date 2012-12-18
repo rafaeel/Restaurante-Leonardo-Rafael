@@ -1,7 +1,7 @@
 #conding:utf-8	
 class RestauranteController < ApplicationController
 	def index
-		@restaurantes = Restaurantes.order("nome")
+		@restaurantes = Restaurantes.order("nome").page(params['page']).per(2)
 	end
 	
 	def show
@@ -48,3 +48,12 @@ class RestauranteController < ApplicationController
 	end
 end
 
+
+	def update
+		@restaurante = Restaurantes.find(params[:id])
+		if @restaurante.update_attributes(params[:restaurante])
+			redirect_to(action: "show", id: @restaurante)
+		else
+			render action: "edit"
+		end
+	end

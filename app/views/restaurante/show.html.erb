@@ -7,11 +7,16 @@
 	</p>
 	<p>
 		<b>Endereço: </b>
-		<%= @restaurante.endereco %>
+			<%= @restaurante.endereco %>
 	</p>
 	<p>
 		<b>Especialidade: </b>
-		<%= @restaurante.especialidade %>
+			<%= @restaurante.especialidade %>
+	</p>
+
+	<p>
+		<b>Foto:</b>
+			<%= image_tag @restaurante.foto.url(:thumb) %>
 	</p>
 
 

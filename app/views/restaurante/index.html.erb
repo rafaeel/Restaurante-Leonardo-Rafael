@@ -6,7 +6,7 @@
 <th>Nome</th>
 <th>Endereço</th>
 <th>Especialidade</th>
-</tr>
+</tr>	
 <% @restaurantes.each do |restaurante| %>
 <tr>
 <td><%= restaurante.nome %></td>
@@ -21,8 +21,9 @@
 <td>
 <!--<%= link_to 'Deletar', action: 'destroy', id: restaurante %>-->
 </td>
-</tr>
+</tr>	
 <% end %>
+<td><%= paginate @restaurantes	%></td>	
 </table>
 <br/>
 <%= link_to 'Novo', action: 'new' %>

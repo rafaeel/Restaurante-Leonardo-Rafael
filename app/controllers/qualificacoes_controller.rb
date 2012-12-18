@@ -25,18 +25,18 @@ class QualificacoesController < ApplicationController
   # GET /qualificacoes/new.json
   def new
     @qualificacao = Qualificacao.new
-
-    respond_to do |format|
-      format.html # new.html.erb
-      format.json { render json: @qualificacao }
-    end
+    
     if params[:cliente]
      @qualificacao.cliente = Cliente.find(params[:cliente])
     end
     if params[:restaurante]
       @qualificacao.restaurante = Restaurantes.find(params[:Restaurantes])
     end
- 
+      
+      respond_to do |format|
+      format.html # new.html.erb
+      format.json { render json: @qualificacao }
+    end
   end
 
   # GET /qualificacoes/1/edit

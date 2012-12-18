@@ -8,10 +8,19 @@
 <% end %>
 </ul>
 <% end %>
-<%= form_for :restaurante, url: {action: 'create'} do |f| %>
-Nome: <%= f.text_field :nome %><br/>
-Endereço: <%= f.text_field :endereco %><br/>
-Especialidade: <%= f.text_field :especialidade %><br/>
-<%= submit_tag 'Criar' %>
+<%= form_for :restaurantes, :url => {:action=>'create'} do |f| %>
+
+	Nome: <%= f.text_field :nome %><br/>
+	Endereço: <%= f.text_field :endereco %><br/>
+	Especialidade: <%= f.text_field :especialidade %><br/>
+	
 <% end %>
+
+<%= form_for :restaurantes, :url => {:action=>'create'},
+				:html => {:multipart=>true} do |f| %>
+<!--outros campos-->
+	<%= f.file_field :foto %><br/>
+	<%= submit_tag 'Criar' %>
+<% end %>
+
 <%= link_to 'Voltar', {action: 'index' } %>
