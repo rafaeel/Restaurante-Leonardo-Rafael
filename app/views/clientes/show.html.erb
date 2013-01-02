@@ -1,15 +1,24 @@
 <p id="notice"><%= notice %></p>
+<h1 align = "center"> Cliente </h1>
+<h2 align = "center"> Mostrar </h2>
+<br>
+<br>
 
-<p>
-  <b>Nome:</b>
-  <%= @cliente.nome %>
+<p align = "center">
+  <font size = 4>
+      <b>Nome:</b>
+      <%= @cliente.nome %>  
+   </font>
 </p>
 
-<p>
-  <b>Idade:</b>
-  <%= @cliente.idade %>
+<p align = "center">
+   <font size = 4>
+      <b>Idade:</b>
+      <%= @cliente.idade %>
+   </font>   
 </p>
 
-
+<p align = "center">
 <%= link_to 'Edit', edit_cliente_path(@cliente) %> |
 <%= link_to 'Back', clientes_path %>
+</p>

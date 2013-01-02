@@ -1,6 +1,10 @@
 <%= render partial: "titulo" %>
 
-<h1>Adicionando Restaurante</h1>
+<h1 align = "center"> Restaurante </h1>
+<h2 align = "center"> Adicionar </h2>
+<br>
+<br>
+
 <% if @restaurante.errors.any? %>
 <ul>
 <% @restaurante.errors.full_messages.each do |msg| %>
@@ -8,19 +12,47 @@
 <% end %>
 </ul>
 <% end %>
-<%= form_for :restaurantes, :url => {:action=>'create'} do |f| %>
 
-	Nome: <%= f.text_field :nome %><br/>
-	Endereço: <%= f.text_field :endereco %><br/>
-	Especialidade: <%= f.text_field :especialidade %><br/>
-	
+<table align ="center">
+<tr>      
+      <%= form_for :restaurantes, :url => {:action=>'create'} do |f| %>
+	<td align = "right"> Nome: </td> 
+   <td> <%= f.text_field :nome %> </td>
+</tr>
+<tr>
+	<td align = "right"> Endereço: </td> 
+   <td> <%= f.text_field :endereco %></td>
+</tr>
+<tr>
+	<td align = "right"> Especialidade: </td> 
+   <td> <%= f.text_field :especialidade %></td>
+</tr>
+
+<tr></tr>
+
+<tr>
+   
 <% end %>
 
 <%= form_for :restaurantes, :url => {:action=>'create'},
 				:html => {:multipart=>true} do |f| %>
 <!--outros campos-->
-	<%= f.file_field :foto %><br/>
-	<%= submit_tag 'Criar' %>
+   <td colspan = 5>
+      <br><br>
+	  <%= f.file_field :foto %>
+   </td>
+</tr>
+<tr align = "center">
+   <td colspan = 5>
+      <br>
+	   <%= submit_tag 'Criar' %>
+   </td>
+</tr>
+<tr align = "center">
 <% end %>
-
-<%= link_to 'Voltar', {action: 'index' } %>
+   <td colspan = 5>
+      <br>
+      <%= link_to 'Voltar', {action: 'index' } %>
+   </td>
+</tr>
+</table>

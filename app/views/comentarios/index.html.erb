@@ -1,10 +1,10 @@
-<h1>Listing comentarios</h1>
-
-<table>
+<h1 align = "Center">Comentarios</h1>
+<h2 align = "Center">Lista</h2>
+<table valign = "middle " align = "center" cellspacing = 6>
   <tr>
     <th>Conteudo</th>
     <th>Comentavel</th>
-    <th>Comentavel type</th>
+    <th>Tipo Comentario</th>
     <th></th>
     <th></th>
     <th></th>
@@ -13,15 +13,16 @@
 <% @comentarios.each do |comentario| %>
   <tr>
     <td><%= comentario.conteudo %></td>
-    <td><%= comentario.comentavel_id %></td>
-    <td><%= comentario.comentavel_type %></td>
-    <td><%= link_to 'Show', comentario %></td>
-    <td><%= link_to 'Edit', edit_comentario_path(comentario) %></td>
-    <td><%= link_to 'Destroy', comentario, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td align = "center"><%= comentario.comentavel_id %></td>
+    <td align = "center"><%= comentario.comentavel_type %></td>
+    <td><%= link_to 'Mostrar', comentario %></td>
+    <td><%= link_to 'Editar', edit_comentario_path(comentario) %></td>
+    <td><%= link_to 'Deletar', comentario, method: :delete, data: { confirm: 'Você tem certeza?' } %></td>
   </tr>
 <% end %>
+<td colspan = 5 align = "center"><br>
+<%= link_to 'Novo Comentario', new_comentario_path %>
+</td>
 </table>
 
 <br />
-
-<%= link_to 'New Comentario', new_comentario_path %>

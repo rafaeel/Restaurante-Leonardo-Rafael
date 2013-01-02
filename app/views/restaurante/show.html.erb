@@ -1,35 +1,63 @@
 	<%= render partial: "titulo" %>
 
-	<h1>Exibindo Restaurante</h1>
-	<p>
-	<b>Nome: </b>
-		<%= @restaurante.nome %>
-	</p>
-	<p>
-		<b>Endereço: </b>
+	<h1 align = "center"> Restaurante </h1>
+	<h2 align = "center"> Mostrar </h2>
+	<br>
+	<br>
+<table align = "center">
+	<tr>
+	<td align = "center">
+		<font size = 3>
+			<b>Nome: </b>
+			<%= @restaurante.nome %>
+		</font>	
+	</td>
+</tr>
+<tr>
+	<td align = "center">
+		<font size = 3>
+			<b>Endereço: </b>
 			<%= @restaurante.endereco %>
-	</p>
-	<p>
-		<b>Especialidade: </b>
+		</font>
+	</td>
+</tr>
+<tr>	
+	<td align = "center">
+		<font size = 3> 
+			<b>Especialidade: </b>
 			<%= @restaurante.especialidade %>
-	</p>
-
-	<p>
-		<b>Foto:</b>
+		</font>
+	</td>
+</tr>
+<tr>
+	<td align = "center">
+		<font size = 3>
+			<br>
+			<b>Foto:</b>
+			<br><br>
 			<%= image_tag @restaurante.foto.url(:thumb) %>
-	</p>
-
-
-
+		</font>
+	</td>
+</tr>
+<tr>
+	<td align = "center">
+<br>
 	<%= link_to "Qualificar este restaurante",
 		:controller => "qualificacoes",
 		:action => "new",
 		:restaurante => @restaurante %>
-
-
-	<%= link_to 'Editar', action: 'edit', id: @restaurante  %>
-	<%= link_to 'Voltar', action: 'index'  %>
+	</p>
+	<p align = "center">
+		<%= link_to 'Editar', action: 'edit', id: @restaurante  %>
+		
 	<% unless @restaurante.comentarios.empty?%>
 		<%= comentarios @restaurante %>
 	<% end %>
-	<%= novo_comentario(@restaurante) %>
+
+
+		<%= novo_comentario(@restaurante) %>
+		<br>
+
+		<%= link_to 'Voltar', action: 'index'  %>
+	</td>
+</table>

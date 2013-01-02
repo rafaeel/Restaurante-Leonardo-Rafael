@@ -1,7 +1,9 @@
 
-<h1>Lista de Clientes</h1>
-
-<table>
+<h1 align = "center"> Clientes </h1>
+<h2 align = "center"> Lista </h2>
+<br>
+<br>
+<table align = "center" cellspacing = 6>
   <tr>
     <th>Nome</th>
     <th>Idade</th>
@@ -13,14 +15,20 @@
 <% @clientes.each do |cliente| %>
   <tr>
     <td><%= cliente.nome %></td>
-    <td><%= cliente.idade %></td>
+    <td align = "center"><%= cliente.idade %></td>
     <td><%= link_to 'Mostrar', cliente %></td>
     <td><%= link_to 'Editar', edit_cliente_path(cliente) %></td>
     <td><%= link_to 'Apagar', cliente, method: :delete, data: { confirm: 'Tem certeza?' } %></td>
   </tr>
 <% end %>
+  <tr>
+    <td colspan = 5 align = "center">
+      <br>
+      <%= link_to 'Novo Cliente', new_cliente_path %> 
+    </td>
+  </tr>
 </table>
 
 <br />
 
-<%= link_to 'Novo Cliente', new_cliente_path %>
+

@@ -1,7 +1,9 @@
 
-<h1>Lista de qualificacoes</h1>
-
-<table>
+<h1 align = "center"> Qualificações </h1>
+<h2 align = "center"> Listar </h2>
+<br>
+<br>
+<table align = "center" cellspacing = 6>
   <tr>
     <th>Cliente</th>
     <th>Restaurante</th>
@@ -15,16 +17,22 @@
 <% @qualificacoes.each do |qualificacao| %>
   <tr>
     <td><%= qualificacao.cliente.nome %></td>
-    <td><%= qualificacao.restaurante_id  %></td>
-    <td><%= qualificacao.nota %></td>
-    <td><%= qualificacao.valor_gasto %></td>
+    <td align = "center"><%= qualificacao.restaurante_id  %></td>
+    <td align = "center"><%= qualificacao.nota %></td>
+    <td align = "center"><%= qualificacao.valor_gasto %></td>
     <td><%= link_to 'Mostrar', qualificacao %></td>
     <td><%= link_to 'Editar', edit_qualificacao_path(qualificacao) %></td>
    <!--> <td><%= link_to 'Apagar', qualificacao, method: :delete, data: { confirm: 'Você tem certeza?' } %></td><!-->
   </tr>
 <% end %>
+  <tr>
+    <td align = "center" colspan = 7>
+      <br>
+      <%= link_to 'Nova Qualificacao', new_qualificacao_path %>
+    </td>
+  </tr>
 </table>
 
 <br />
 
-<%= link_to 'Nova Qualificacao', new_qualificacao_path %>
+

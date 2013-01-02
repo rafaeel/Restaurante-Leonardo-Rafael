@@ -1,29 +1,43 @@
 <%= render partial: "titulo" %>
 
-<h1>Listagem de Restaurantes</h1>
-<table>
-<tr>
-<th>Nome</th>
-<th>Endereço</th>
-<th>Especialidade</th>
-</tr>	
-<% @restaurantes.each do |restaurante| %>
-<tr>
-<td><%= restaurante.nome %></td>
-<td><%= restaurante.endereco %></td>
-<td><%= restaurante.especialidade %></td>
-<td>
-<%= link_to 'Mostrar', action: 'show', id: restaurante %>
-</td>
-<td>
-<%= link_to 'Editar', action: 'edit', id: restaurante %>
-</td>
-<td>
-<!--<%= link_to 'Deletar', action: 'destroy', id: restaurante %>-->
-</td>
-</tr>	
-<% end %>
-<td><%= paginate @restaurantes	%></td>	
-</table>
+<h1 align = "center"> Restaurante </h1>
+<h2 align = "center"> Lista </h2>
+<br>
+<br>
+<table align = "center" cellspacing = 12>
+   <th>Nome</th>
+   <th>Endereço</th>
+   <th>Especialidade</th>
+   </tr>	
+      <% @restaurantes.each do |restaurante| %>
+   <tr align = "center">
+      <td><%= restaurante.nome %></td>
+      <td><%= restaurante.endereco %></td>
+      <td><%= restaurante.especialidade %></td>
+      <td>
+         <%= link_to 'Mostrar', action: 'show', id: restaurante %>
+      </td>
+      <td>
+         <%= link_to 'Editar', action: 'edit', id: restaurante %>
+      </td>
+      <td>
+         <!--<%= link_to 'Deletar', action: 'destroy', id: restaurante %>-->
+      </td>
+   </tr>	
+   <% end %>
+
+   <tr>
+      <td colspan = 5 align = "center">
+         <br>
+         <%= paginate @restaurantes %>
+      </td> 
+   </tr>
+   <tr>
+      <td colspan = 5 align = "center">
+         <br>
+         <%= link_to 'Novo Restaurante', action: 'new' %>
+      </td>
+   </tr>
+   </table>
 <br/>
-<%= link_to 'Novo', action: 'new' %>
+

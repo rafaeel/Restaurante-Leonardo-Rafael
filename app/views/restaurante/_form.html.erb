@@ -1,0 +1,5 @@
+<%= form_for :restaurantes, :url => {:action=>'create'},
+:html => {:multipart=>true} do |f| %>
+<!--outros campos-->
+<%= f.file_field :foto %>
+<% end %>
