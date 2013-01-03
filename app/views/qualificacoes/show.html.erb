@@ -1,38 +1,83 @@
+
+<table align = "center">
+   <tr>
+      <td align = "center" width = "50%">
+         <div class = "pontaEsq"></div> 
+      <td align = "center">
+         <a href= "http://localhost:3000/Clientes"> <div class = "botaoCliente"></div> </a> 
+      </td>
+      <td align = "center"> 
+         <a href= "http://localhost:3000/Qualificacoes"> <div class = "botaoQualific"></div> </a> 
+      </td>
+      <td align = "center">
+         <a href= "http://localhost:3000/restaurante"> <div class = "botaoRest"> </div> </a>
+      </td>
+      <td align = "center">
+         <a href= "http://localhost:3000/Comentarios"> <div class = "botaoComent"></div> </a>
+      </td>
+      <td align = "center" width = "50%">
+         <div class = "pontaDir"></div> 
+      </td>
+   </tr>
+</table>
+
 <p id="notice"><%= notice %></p>
+<h1 align = "center"> Qualificações </h1>
+<h2 align = "center"> Mostrar </h2>
+<br>
+<br>
 
 
-
-<p>
-  <b>Cliente:</b>
-  <%= @qualificacao.cliente.nome%>
+<p align = "center">
+  <font size = 4>
+      <b>Cliente:</b>
+      <%= @qualificacao.cliente.nome%>
 </p>
 
-<p>
-  <b>Restaurante:</b>
-  <%= @qualificacao.restaurante_id %>
+<p align = "center">
+  <font size = 4>
+      <b>Restaurante:</b>
+      <%= @qualificacao.restaurante_id %>
 </p>
 
-<p>
-  <b>Nota:</b>
-  <%= @qualificacao.nota %>
+<p align = "center">
+  <font size = 4>
+      <b>Nota:</b>
+      <%= @qualificacao.nota %>
 </p>
 
-<p>
-  <b>Valor gasto:</b>
-  <%= @qualificacao.valor_gasto %>
+<p align = "center">
+  <font size = 4>
+      <b>Valor Gasto:</b>
+        <%= @qualificacao.valor_gasto %>
 </p>
 
-
-<%= link_to "Nova qualificação", :controller => "qualificacoes",
+<p align = "center">
+<%= link_to "Nova Qualificação", :controller => "qualificacoes",
 	:action => "new",
 	:cliente => @cliente %>
+</p>
 
 
-
+<p align = "center">
 <%= link_to 'Editar', edit_qualificacao_path(@qualificacao) %> |
 <%= link_to 'Voltar', qualificacoes_path %>
+</p>
+<p align = "center">
 <% unless @qualificacao.comentarios.empty?%>
     <%= comentarios @qualificacao %>
   <% end %>
   <%= novo_comentario(@qualificacao) %>
 
+</p>
+
+<br><br><br>
+
+<table align = "center" width = "100%" height = "75px">
+   <tr>
+      <td class = "rodape" align = "center">
+         Desenvolvido por: Rafael e Leonardo - RubyThree Desenvolvimento de Aplicativos Web & Mobile (iPhone/Android) <br>
+         Todos os direitos reservados ©
+      </td>
+   </tr>
+</table>

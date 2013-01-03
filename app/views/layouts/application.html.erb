@@ -3,16 +3,26 @@
 <head>
   <title>Programa de Qualificação de Restaurantes</title>
   <title>Vota Prato</title>
-  <h1 align = "center">Controle de Restaurantes</h1><br>
-		<%= menu_principal %>
+  <table align = "center" width = "100%" height = "75px">
+   <tr>
+      <td class = "cabecalho" align = "center">
+         <h1>&nbsp;&nbsp;&nbsp;Controle de Restaurantes COW ENTERPRISES 2.0</h1>
+      </td>
+   </tr>
+</table>
+<br>
+<!--
+  <h1 class = "menu" align = "center"><%= menu_principal %> 
+-->
   <%= stylesheet_link_tag "scaffolds" %>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
+  </h1>
 </head>
 <body>
 
-<%= yield %>
+<%= yield %> 
 
 </body>
 </html>

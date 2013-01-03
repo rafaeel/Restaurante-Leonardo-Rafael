@@ -1,6 +1,56 @@
-<h1>Editing qualificacao</h1>
 
-<%= render 'form' %>
+<table align = "center">
+   <tr>
+      <td align = "center" width = "50%">
+         <div class = "pontaEsq"></div> 
+      <td align = "center">
+         <a href= "http://localhost:3000/Clientes"> <div class = "botaoCliente"></div> </a> 
+      </td>
+      <td align = "center"> 
+         <a href= "http://localhost:3000/Qualificacoes"> <div class = "botaoQualific"></div> </a> 
+      </td>
+      <td align = "center">
+         <a href= "http://localhost:3000/restaurante"> <div class = "botaoRest"> </div> </a>
+      </td>
+      <td align = "center">
+         <a href= "http://localhost:3000/Comentarios"> <div class = "botaoComent"></div> </a>
+      </td>
+      <td align = "center" width = "50%">
+         <div class = "pontaDir"></div> 
+      </td>
+   </tr>
+</table>
 
-<%= link_to 'Mostrar', @qualificacao %> |
-<%= link_to 'Voltar', qualificacoes_path %>
+<h1 align = "center"> Qualificações </h1>
+<h2 align = "center"> Editar </h2>
+<br>
+<br>
+
+<table align = "center">
+<tr>
+   <td align = "center">
+      <%= render 'form' %>
+   </td>
+</tr>
+<tr>
+   <td align = "center">
+      <br>
+      <br>
+         <%= link_to 'Mostrar', @qualificacao %> |
+         <%= link_to 'Voltar', qualificacoes_path %>
+      </td>
+</tr>
+
+</table>
+
+<br><br><br>
+
+<table align = "center" width = "100%" height = "75px">
+   <tr>
+      <td class = "rodape" align = "center">
+         Desenvolvido por: Rafael e Leonardo - RubyThree Desenvolvimento de Aplicativos Web & Mobile (iPhone/Android) <br>
+         Todos os direitos reservados ©
+      </td>
+   </tr>
+</table>
+

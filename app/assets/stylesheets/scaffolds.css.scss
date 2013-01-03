@@ -5,11 +5,25 @@ body {
   font-size: 13px;
   line-height: 18px;
 }
-
+s
 p, ol, ul, td {
   font-family: verdana, arial, helvetica, sans-serif;
-  font-size: 13px;
+  font-size: 14px;
   line-height: 18px;
+}
+
+.cabecalho{
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 14px;
+  background: -moz-linear-gradient(bottom, #d8bfd8, #fff) repeat-X;
+  background: -webkit-gradient(linear, left bottom, left top, from(#d8bfd8), to(#9932cc)) repeat-X;
+}
+
+.rodape{
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 14px;
+  background: -moz-linear-gradient(top, #d8bfd8, #fff) repeat-X;
+  background: -webkit-gradient(linear, left top, left bottom, from(#d8bfd8), to(#9932cc)) repeat-X;
 }
 
 pre {
@@ -20,12 +34,15 @@ pre {
 
 a {
   color: #000;
+  text-decoration: none;
   &:visited {
     color: #000fff;
   }
-  &:hover {
-    color: #800000;
-    background-color: #b0c4de;
+  &:hover { -webkit-transition: 0.5s;
+    color: #855;
+    background-color: #d8bfd8;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
   }
 }
 
@@ -65,5 +82,145 @@ div {
   ul li {
     font-size: 12px;
     list-style: square;
+
   }
+}
+.botaoCliente {
+display:block;
+width: 94px;
+height: 33px;
+text-valign:center;
+font:bold 14px verdana, arial, tahoma, sans-serif;
+text-decoration:none;
+color:black;
+border-width:10px;
+-webkit-border-image: url(img/Cliente_Roxo.jpg) 10 stretch;
+-moz-border-image: url(img/Cliente_Roxo.jpg) 10 stretch;
+-o-border-image: url(img/Cliente_Roxo.jpg) 10 stretch;
+}
+
+.botaoCliente:hover {
+display:block;
+width: 94px;
+height: 33px;
+text-valign:center;
+font:bold 14px verdana, arial, tahoma, sans-serif;
+text-decoration:none;
+color:black;
+border-width:10px;
+-webkit-border-image: url(img/Cliente_Roxo_hover.jpg) 10 stretch;
+-moz-border-image: url(img/Cliente_Roxo_hover.jpg) 10 stretch;
+-o-border-image: url(img/Cliente_Roxo_hover.jpg) 10 stretch;
+}
+
+.botaoQualific {
+display:block;
+width: 94px;
+height: 33px;
+text-valign:center;
+font:bold 14px verdana, arial, tahoma, sans-serif;
+text-decoration:none;
+color:black;
+border-width:10px;
+-webkit-border-image: url(img/Qualific_Roxo.jpg) 10 stretch;
+-moz-border-image: url(img/Qualific_Roxo.jpg) 10 stretch;
+-o-border-image: url(img/Qualific_Roxo.jpg) 10 stretch;
+}
+
+.botaoQualific:hover {
+display:block;
+width: 94px;
+height: 33px;
+text-valign:center;
+font:bold 14px verdana, arial, tahoma, sans-serif;
+text-decoration:none;
+color:black;
+border-width:10px;
+-webkit-border-image: url(img/Qualific_Roxo_hover.jpg) 10 stretch;
+-moz-border-image: url(img/Qualific_Roxo_hover.jpg) 10 stretch;
+-o-border-image: url(img/Qualific_Roxo_hover.jpg) 10 stretch;
+}
+
+.botaoRest {
+display:block;
+width: 94px;
+height: 33px;
+text-valign:center;
+font:bold 14px verdana, arial, tahoma, sans-serif;
+text-decoration:none;
+color:black;
+border-width:10px;
+-webkit-border-image: url(img/Restaurante_Roxo.jpg) 10 stretch;
+-moz-border-image: url(img/Restaurante_Roxo.jpg) 10 stretch;
+-o-border-image: url(img/Restaurante_Roxo.jpg) 10 stretch;
+}
+
+.botaoRest:hover {
+display:block;
+width: 94px;
+height: 33px;
+text-valign:center;
+font:bold 14px verdana, arial, tahoma, sans-serif;
+text-decoration:none;
+color:black;
+border-width:10px;
+-webkit-border-image: url(img/Restaurante_Roxo_hover.jpg) 10 stretch;
+-moz-border-image: url(img/Restaurante_Roxo_hover.jpg) 10 stretch;
+-o-border-image: url(img/Restaurante_Roxo_hover.jpg) 10 stretch;
+}
+
+.botaoComent {
+display:block;
+width: 94px;
+height: 33px;
+text-valign:center;
+font:bold 14px verdana, arial, tahoma, sans-serif;
+text-decoration:none;
+color:black;
+border-width:10px;
+-webkit-border-image: url(img/Coment_Roxo.jpg) 10 stretch;
+-moz-border-image: url(img/Coment_Roxo.jpg) 10 stretch;
+-o-border-image: url(img/Coment_Roxo.jpg) 10 stretch;
+}
+
+.botaoComent:hover {
+display:block;
+width: 94px;
+height: 33px;
+text-valign:center;
+font:bold 14px verdana, arial, tahoma, sans-serif;
+text-decoration:none;
+color:black;
+border-width:10px;
+-webkit-border-image: url(img/Coment_Roxo_hover.jpg) 10 stretch;
+-moz-border-image: url(img/Coment_Roxo_hover.jpg) 10 stretch;
+-o-border-image: url(img/Coment_Roxo_hover.jpg) 10 stretch;
+}
+
+.pontaEsq {
+display:block;
+width: 200px;
+height: 150px;
+text-align:center;
+font:bold 14px verdana, arial, tahoma, sans-serif;
+text-decoration:none;
+color:black;
+border-width:10px;
+-webkit-border-image: url(img/boi2.gif) 10 stretch;
+-moz-border-image: url(img/boi2.gif) 10 stretch;
+-o-border-image: url(img/boi2.gif) 10 stretch;
+}
+
+.pontaDir {
+display:block;
+width: 200px;
+height: 150px;
+text-align:center;
+font:bold 14px verdana, arial, tahoma, sans-serif;
+text-decoration:none;
+color:black;
+border-width:10px;
+-webkit-border-image: url(img/boi.gif) 10 stretch;
+-moz-border-image: url(img/boi.gif) 10 stretch;
+-o-border-image: url(img/boi.gif) 10 stretch;
 }
