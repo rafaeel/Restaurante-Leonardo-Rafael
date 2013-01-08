@@ -1,4 +1,6 @@
 Restaurante::Application.routes.draw do
+  get "login/login"
+
   resources :comentarios
 
   resources :qualificacoes
