@@ -1,4 +1,5 @@
 class ComentariosController < ApplicationController
+  before_filter :authenticate_user!, :except => [:index]
   # GET /comentarios
   # GET /comentarios.json
   def index
@@ -43,20 +44,13 @@ class ComentariosController < ApplicationController
     @comentario = Comentario.new(params[:comentario])
 
     respond_to do |format|
-      if @comentario.save
-=begin
-        format.html { redirect_to @comentario, notice: 'Comentario was successfully created.' }
-        format.json { render json: @comentario, status: :created, location: @comentario }
-      else
-        format.html { render action: "new" }
-        format.json { render json: @comentario.errors, status: :unprocessable_entity }
-=end
+        @comentario.save
+        format.html { redirect_to @comentario, notice: 'Comentario postado com sucesso.' }
         format.xml { render :xml => @comentario, :status => :created, :location => @comentario }
         format.js
       end
 
     end
-  end
 
   # PUT /comentarios/1
   # PUT /comentarios/1.json
@@ -80,6 +74,7 @@ class ComentariosController < ApplicationController
     @comentario = Comentario.find(params[:id])
     @comentario.destroy
     respond_to do |format|
+      format.html { redirect_to @comentario, notice: 'Comentario deletado com sucesso.' }
       format.xml { head :ok }
       format.js { head :ok }
     end

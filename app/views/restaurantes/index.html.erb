@@ -1,0 +1,38 @@
+<h1 align = "center"> Restaurantes </h1>
+<h2 align = "center"> Lista </h2>
+<br>
+<br>
+<table align = "center" cellspacing = 12>
+   <th> <font size = 3> Nome</th>
+   <th> <font size = 3> Endereço</th>
+   <th> <font size = 3> Especialidade</th>
+   </tr>  
+      <% @restaurantes.each do |restaurante| %>
+   <tr align = "center">
+      <td> <font size = 3> <%= restaurante.nome %></td>
+      <td> <font size = 3> <%= restaurante.endereco %></td>
+      <td> <font size = 3> <%= restaurante.especialidade %></td>
+      <td>
+          <font size = 3> <%= link_to 'Mostrar', action: 'show', id: restaurante %>
+      </td>
+      <td>
+          <font size = 3> <%= link_to 'Editar', action: 'edit', id: restaurante %>
+      </td>
+      <td>
+         <!--<%= link_to 'Deletar', action: 'destroy', id: restaurante %>-->
+      </td>
+   </tr>  
+   <% end %>
+
+   <tr>
+      <td colspan = 5 align = "center">
+        
+      </td> 
+   </tr>
+   <tr>
+      <td colspan = 5 align = "center">
+         <br>
+          <font size = 3> <%= link_to 'Novo Restaurante', action: 'new' %>
+      </td>
+   </tr>
+   </table>

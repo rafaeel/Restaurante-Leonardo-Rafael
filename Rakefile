@@ -4,4 +4,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-Restaurante::Application.load_tasks
+Projeto::Application.load_tasks

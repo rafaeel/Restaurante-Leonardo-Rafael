@@ -1,58 +1,159 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Programa de Qualificação de Restaurantes</title>
-  <title>Vota Prato</title>
-  <table align = "center" width = "100%" height = "75px">
-   <tr>
-      <td class = "cabecalho" align = "center">
-         <h1>&nbsp;&nbsp;&nbsp;Controle de Restaurantes COW ENTERPRISES 2.0</h1>
-      </td>
-   </tr>
-</table>
-<br>
-<!--
-  <h1 class = "menu" align = "center"><%= menu_principal %> 
--->
-<table align = "center">
-   <tr>
-      <td align = "center" width = "50%">
-         <div class = "pontaEsq"></div> 
-      <td align = "center">
-         <a href= "http://localhost:3000/Clientes"> <div class = "botaoCliente"></div> </a> 
-      </td>
-      <td align = "center"> 
-         <a href= "http://localhost:3000/Qualificacoes"> <div class = "botaoQualific"></div> </a> 
-      </td>
-      <td align = "center">
-         <a href= "http://localhost:3000/restaurante"> <div class = "botaoRest"> </div> </a>
-      </td>
-      <td align = "center">
-         <a href= "http://localhost:3000/Comentarios"> <div class = "botaoComent"></div> </a>
-      </td>
-      <td align = "center" width = "50%">
-         <div class = "pontaDir"></div> 
-      </td>
-   </tr>
-</table>
-  <%= stylesheet_link_tag "scaffolds" %>
+  <title>.:: Controle de Resurantes COW ENTERPRISES 20.0 ::.</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
-
-  </h1>
 </head>
 <body>
+    <table width=100% height=100% cellspacing = 0>
+    <tr>
+      <td class="header" colspan=3>
+        <table width=100% height=170px>
+          <tr>
+            <td align="center" width = 25% height = 140px>
+              <div class = "pontaEsq"> </div>
+            </td>
+            <td>
+              <div class = "header_center"> </div>
+            </td>
+            <td align="center" width = 25% height = 140px>
+              <div class = "pontaDir"> </div>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+    <tr>
+      <td class="header" colspan=3 align = "center">
+        <div id="user_nav">
+          <font size=3px><b>
+  <% if user_signed_in? %>
+    Conectado ao sistema como <%= current_user.email %>. Não é você?
+    <%= link_to "Sair", destroy_user_session_path, :method => :delete %>
+  <% else %>
+    <%= link_to "Registrar-se", new_user_registration_path %> ou <%= link_to "Fazer Login", new_user_session_path %>
+  <% end %>
+</b>
+</font>
+</div>
+      </td>
+    </tr>
+    <tr>
+      <td class="body" width=20% height=60%>
+
+
+        <!-- MENU -->
+        <table align = "center">
+          <tr>
+            <td>
+              <a href="http://localhost:3000/restaurantes"> <div class = "botaoRest"></div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <a href="http://localhost:3000/Qualificacoes"> <div class = "botaoQualific"></div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <a href="http://localhost:3000/Clientes"> <div class = "botaoCliente"></div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <a href="http://localhost:3000/Comentarios"> <div class = "botaoComent"></div>
+            </td>
+          </tr>
+        </table>
+        <!-- FIM DO MENU -->
+
+
+      </td>
+      <td class="body" width=60% height=60% align="center">
+
+
+
 
 <%= yield %>
-<table align = "center" width = "100%" height = "75px">
-   <tr>
-      <td class = "rodape" align = "center">
-         Desenvolvido por: Rafael e Leonardo - RubyThree Desenvolvimento de Aplicativos Web & Mobile (iPhone/Android) <br>
-         Todos os direitos reservados ©
+<script type="text/javascript">
+<%=yield :js%>
+</script>
+
+
+</td>
+      <td class="body" width=20% height=60% align="center">
+        <marquee direction="up" height=100% scrollamount="5"  onmouseover="this.stop()" onmouseout="this.start()">
+
+        <!-- IMAGENS POP-UP -->
+
+        <table cellspacing = 1>
+          <tr>
+            <td>
+              <a href="#" onclick="window.open('img/img1.jpg', 'IMAGEM 1', 'STATUS=NO, TOOLBAR=NO, LOCATION=NO, DIRECTORIES=NO, RESISABLE=NO, SCROLLBARS=YES, TOP=10, LEFT=100, WIDTH=744, HEIGHT=580');">
+
+                <div class = "img1"></div>
+         <!-- <img src="img/img1.jpg" width="120" height="60" border="1"> -->
+              </a>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <a href="#" onclick="window.open('img/img2.jpg', 'IMAGEM 2', 'STATUS=NO, TOOLBAR=NO, LOCATION=NO, DIRECTORIES=NO, RESISABLE=NO, SCROLLBARS=YES, TOP=10, LEFT=100, WIDTH=744, HEIGHT=580');">
+
+                <div class = "img2"></div>
+          <!-- <img src="img/img2.jpg" width="120" height="60" border="1"> -->
+              </a>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <a href="#" onclick="window.open('img/img3.jpg', 'IMAGEM 3', 'STATUS=NO, TOOLBAR=NO, LOCATION=NO, DIRECTORIES=NO, RESISABLE=NO, SCROLLBARS=YES, TOP=10, LEFT=100, WIDTH=744, HEIGHT=580');">
+
+                <div class = "img3"></div>
+          <!-- <img src="img/img3.jpg" width="120" height="60" border="1"> -->
+              </a>
+
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <a href="#" onclick="window.open('img/img4.jpg', 'IMAGEM 4', 'STATUS=NO, TOOLBAR=NO, LOCATION=NO, DIRECTORIES=NO, RESISABLE=NO, SCROLLBARS=YES, TOP=10, LEFT=100, WIDTH=744, HEIGHT=580');">
+
+                <div class = "img4"></div>
+          <!-- <img src="img/img4.jpg" width="120" height="60" border="1"> -->
+              </a>
+
+            </td>
+          </tr>
+          <tr>
+            <td>
+
+              <a href="#" onclick="window.open('img/img5.jpg', 'IMAGEM 5', 'STATUS=NO, TOOLBAR=NO, LOCATION=NO, DIRECTORIES=NO, RESISABLE=NO, SCROLLBARS=YES, TOP=10, LEFT=100, WIDTH=744, HEIGHT=580');">
+
+                <div class = "img5"></div>
+                <!-- <img src="img/img5.jpg" width="120" height="60" border="1"> -->
+              </a>
+        
+            </td>
+          </tr>
+        </table>
+  
+        <!-- FIM DAS IMAGENS -->
+
+
+        </marquee>
       </td>
-   </tr>
-</table> 
+    </tr>
+    <tr>
+      <td class = "footer" align="center" width=100% height=50px colspan = 3>
+        Desenvolvido por: Rafael e Leonardo - RubyThree Desenvolvimento de Aplicativos Web & Mobile (iPhone/Android) <br>
+        Todos os direitos reservados
+      </td>
+    </tr>
+  </table>
+
 
 </body>
 </html>

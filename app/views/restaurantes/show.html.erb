@@ -1,0 +1,43 @@
+<p id="notice"><%= notice %></p>
+
+<h1 align = "center"> Restaurantes </h1>
+<h2 align = "center"> Mostrar </h2>
+<br>
+<br>
+
+<p align = "center">
+  <font size = 4>
+      <b>Nome:</b>
+  <%= @restaurante.nome %>
+</font>
+</p>
+
+<p align = "center">
+   <font size = 4>
+      <b>Endereco:</b>
+  <%= @restaurante.endereco %>
+</p>  
+
+<p align = "center">
+      <font size = 3> 
+         <b>Especialidade: </b>
+         <%= @restaurante.especialidade %>
+      </font>
+</p>
+<br>
+
+<%= link_to "Qualificar este restaurante",
+     :controller => "qualificacoes",
+     :action => "new",
+     :restaurante => @restaurante %>
+     <br>
+
+<% unless @restaurante.comentarios.empty? %>
+   <%= comentarios @restaurante %>
+<% end %>
+<br>
+<%= novo_comentario(@restaurante) %>
+<br>
+
+<%= link_to 'Editar', edit_restaurante_path(@restaurante) %> |
+<%= link_to 'Voltar', restaurantes_path %>

@@ -1,53 +1,35 @@
-
 <p id="notice"><%= notice %></p>
+
 <h1 align = "center"> Qualificações </h1>
 <h2 align = "center"> Mostrar </h2>
 <br>
-<br>
-
 
 <p align = "center">
-  <font size = 4>
+  <font size = 3>
       <b>Cliente:</b>
-      <%= @qualificacao.cliente.nome%>
+  <%= @qualificacao.cliente.nome %>
 </p>
 
 <p align = "center">
-  <font size = 4>
+  <font size = 3>
       <b>Restaurante:</b>
-      <%= @qualificacao.restaurante_id %>
+  <%= @qualificacao.restaurante.nome %>
 </p>
 
 <p align = "center">
-  <font size = 4>
+  <font size = 3>
       <b>Nota:</b>
-      <%= @qualificacao.nota %>
+  <%= @qualificacao.nota %>
 </p>
 
 <p align = "center">
-  <font size = 4>
+  <font size = 3>
       <b>Valor Gasto:</b>
-        <%= @qualificacao.valor_gasto %>
+  <%= @qualificacao.valor_gasto %>
 </p>
 
 <p align = "center">
-<%= link_to "Nova Qualificação", :controller => "qualificacoes",
-	:action => "new",
-	:cliente => @cliente %>
-</p>
-
-
-<p align = "center">
+    <font size = 3>
 <%= link_to 'Editar', edit_qualificacao_path(@qualificacao) %> |
 <%= link_to 'Voltar', qualificacoes_path %>
 </p>
-<p align = "center">
-<% unless @qualificacao.comentarios.empty?%>
-    <%= comentarios @qualificacao %>
-  <% end %>
-  <%= novo_comentario(@qualificacao) %>
-
-</p>
-
-<br><br><br>
-

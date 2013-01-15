@@ -3,29 +3,28 @@
 <h1 align = "Center">Comentários</h1>
 <h2 align = "Center">Mostrar</h2>
 <br>
-<br>
 
 <p align = "center">
-  <font size = 4>
+  <font size = 3>
       <b>Conteúdo:</b>
       <%= @comentario.conteudo %>
 </p>
 
 <p align = "center">
-  <font size = 4>
+  <font size = 3>
       <b>Comentável:</b>
       <%= @comentario.comentavel_id %>
 </p>
 
 <p align = "center">
-  <font size = 4>
+  <font size = 3>
       <b>Comentável Type:</b>
       <%= @comentario.comentavel_type %>
 </p>
 
 <p align = "center">
+   <font size = 3 >
 <%= link_to 'Editar', edit_comentario_path(@comentario) %> |
 <%= link_to 'Voltar', comentarios_path %>
+</font>
 </p>
-
-<br><br><br>

@@ -9,7 +9,7 @@ if defined?(Bundler)
   # Bundler.require(:default, :assets, Rails.env)
 end
 
-module Restaurante
+module Projeto
   class Application < Rails::Application
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
@@ -37,7 +37,8 @@ module Restaurante
     config.encoding = "utf-8"
 
     # Configure sensitive parameters which will be filtered from the log file.
-    config.filter_parameters += [:password]
+    config.filter_parameters << :password
+    config.secret_token = '9096504501c6bf4fd2338767107dd95ef29a72be4b94747d87e256c6e4733003d4a1156ce7b64ea849479264f8215405643559cc35930936944408884b4d69d7'
 
     # Enable escaping HTML in JSON.
     config.active_support.escape_html_entities_in_json = true

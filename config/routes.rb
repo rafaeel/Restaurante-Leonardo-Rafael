@@ -1,5 +1,5 @@
-Restaurante::Application.routes.draw do
-  get "login/login"
+Projeto::Application.routes.draw do
+  devise_for :users
 
   resources :comentarios
 
@@ -7,11 +7,9 @@ Restaurante::Application.routes.draw do
 
   resources :clientes
 
-  resources :restaurante
-  # The priority is based upon order of creation:
-  # first created -> highest priority.
+  resources :restaurantes
 
-  # Sample of regular route:
+  root :to => "restaurantes#index"
   
 
   # The priority is based upon order of creation:
@@ -69,10 +67,5 @@ Restaurante::Application.routes.draw do
 
   # This is a legacy wild controller route that's not recommended for RESTful applications.
   # Note: This route will make all actions in every controller accessible via GET requests.
-  match ':controller(/:action(/:id))(.:format)'
-  match 'inicio', controller: 'restaurante', action: 'index'
-
-  #match 'rack',
-  #:to => proc{|env| [200, {"Content-Type" => "text/html"},
-  #["App Rack numa rota Rails"]]}
+   match ':controller(/:action(/:id))(.:format)'
 end

@@ -1,0 +1,14 @@
+<h1><b>Re-enviar Instruções de Confirmação</b></h1>
+<br>
+<font size = 3 color=#000>
+<%= form_for(resource, :as => resource_name, :url => confirmation_path(resource_name), :html => { :method => :post }) do |f| %>
+  <%= devise_error_messages! %>
+
+  <div><%= f.label :email %><br />
+  <%= f.email_field :email %></div>
+<br>
+  <div><%= f.submit "Re-enviar" %></div>
+<% end %>
+<br>
+<%= render "devise/shared/links" %>
+</font>

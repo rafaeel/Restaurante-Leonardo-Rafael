@@ -1,4 +1,5 @@
 class QualificacoesController < ApplicationController
+  before_filter :authenticate_user!, :except => [:index]
   # GET /qualificacoes
   # GET /qualificacoes.json
   def index
@@ -25,15 +26,8 @@ class QualificacoesController < ApplicationController
   # GET /qualificacoes/new.json
   def new
     @qualificacao = Qualificacao.new
-    
-    if params[:cliente]
-     @qualificacao.cliente = Cliente.find(params[:cliente])
-    end
-    if params[:restaurante]
-      @qualificacao.restaurante = Restaurantes.find(params[:Restaurantes])
-    end
-      
-      respond_to do |format|
+
+    respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @qualificacao }
     end

@@ -4,10 +4,10 @@
 <br>
 <table align = "center" cellspacing = 6 >
   <tr>
-    <th>Cliente</th>
-    <th>Restaurante</th>
-    <th>Nota</th>
-    <th>Valor gasto</th>
+    <th> <font size = 3> Cliente</th>
+    <th> <font size = 3> Restaurante</th>
+    <th> <font size = 3> Nota</th>
+    <th> <font size = 3> Valor gasto</th>
     <th></th>
     <th></th>
     <th></th>
@@ -15,22 +15,17 @@
 
 <% @qualificacoes.each do |qualificacao| %>
   <tr>
-    <td><%= qualificacao.cliente.nome %></td>
-    <td align = "center"><%= qualificacao.restaurante_id  %></td>
-    <td align = "center"><%= qualificacao.nota %></td>
-    <td align = "center"><%= qualificacao.valor_gasto %></td>
-    <td><%= link_to 'Mostrar', qualificacao %></td>
-    <td><%= link_to 'Editar', edit_qualificacao_path(qualificacao) %></td>
-   <!--> <td><%= link_to 'Apagar', qualificacao, method: :delete, data: { confirm: 'Você tem certeza?' } %></td><!-->
+    <td> <font size = 3> <%= qualificacao.cliente.nome %></td>
+    <td align = "center"> <font size = 3> <%= qualificacao.restaurante.nome %></td>
+    <td align = "center"> <font size = 3> <%= qualificacao.nota %></td>
+    <td align = "center"> <font size = 3> <%= qualificacao.valor_gasto %></td>
+    <td> <font size = 3> <%= link_to 'Mostrar', qualificacao %></td>
+    <td> <font size = 3> <%= link_to 'Editar', edit_qualificacao_path(qualificacao) %></td>
+    <td> <font size = 3> <%= link_to 'Deletar', qualificacao, method: :delete, data: { confirm: 'Tem certeza?' } %></td>
   </tr>
 <% end %>
-  <tr>
-    <td align = "center" colspan = 7>
-      <br>
-      <%= link_to 'Nova Qualificacao', new_qualificacao_path %>
-    </td>
-  </tr>
 </table>
 
-<br><br><br>
+<br />
 
+ <font size = 3> <%= link_to 'Nova Qualificação', new_qualificacao_path %>

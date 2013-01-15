@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121217154104) do
+ActiveRecord::Schema.define(:version => 20130115141339) do
 
   create_table "clientes", :force => true do |t|
     t.string   "nome",       :limit => 80
@@ -31,16 +31,24 @@ ActiveRecord::Schema.define(:version => 20121217154104) do
   add_index "comentarios", ["comentavel_id"], :name => "index_comentarios_on_comentavel_id"
   add_index "comentarios", ["comentavel_type"], :name => "index_comentarios_on_comentavel_type"
 
-  create_table "pratos", :force => true do |t|
-    t.string   "nome",       :limit => 80
-    t.datetime "created_at",               :null => false
-    t.datetime "updated_at",               :null => false
+  create_table "models", :force => true do |t|
+    t.string   "email",                               :default => "", :null => false
+    t.string   "encrypted_password",   :limit => 128, :default => "", :null => false
+    t.string   "password_salt",                       :default => "", :null => false
+    t.string   "reset_password_token"
+    t.string   "remember_token"
+    t.datetime "remember_created_at"
+    t.integer  "sign_in_count",                       :default => 0
+    t.datetime "current_sign_in_at"
+    t.datetime "last_sign_in_at"
+    t.string   "current_sign_in_ip"
+    t.string   "last_sign_in_ip"
+    t.datetime "created_at",                                          :null => false
+    t.datetime "updated_at",                                          :null => false
   end
 
-  create_table "pratos_restaurantes", :id => false, :force => true do |t|
-    t.integer "prato_id"
-    t.integer "restaurante_id"
-  end
+  add_index "models", ["email"], :name => "index_models_on_email", :unique => true
+  add_index "models", ["reset_password_token"], :name => "index_models_on_reset_password_token", :unique => true
 
   create_table "qualificacoes", :force => true do |t|
     t.integer  "cliente_id"
@@ -54,23 +62,30 @@ ActiveRecord::Schema.define(:version => 20121217154104) do
   add_index "qualificacoes", ["cliente_id"], :name => "index_qualificacoes_on_cliente_id"
   add_index "qualificacoes", ["restaurante_id"], :name => "index_qualificacoes_on_restaurante_id"
 
-  create_table "receita", :force => true do |t|
-    t.integer  "prato_id"
-    t.text     "conteudo"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+  create_table "restaurantes", :force => true do |t|
+    t.string   "nome",          :limit => 80
+    t.string   "endereco"
+    t.datetime "created_at",                  :null => false
+    t.datetime "updated_at",                  :null => false
+    t.string   "especialidade", :limit => 40
   end
 
-  create_table "restaurantes", :force => true do |t|
-    t.string   "nome",              :limit => 80
-    t.string   "endereco"
-    t.datetime "created_at",                      :null => false
-    t.datetime "updated_at",                      :null => false
-    t.string   "especialidade",     :limit => 40
-    t.string   "foto_file_name"
-    t.string   "foto_content_type"
-    t.integer  "foto_file_size"
-    t.datetime "foto_updated_at"
+  create_table "users", :force => true do |t|
+    t.string   "email",                  :default => "", :null => false
+    t.string   "encrypted_password",     :default => "", :null => false
+    t.string   "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.integer  "sign_in_count",          :default => 0
+    t.datetime "current_sign_in_at"
+    t.datetime "last_sign_in_at"
+    t.string   "current_sign_in_ip"
+    t.string   "last_sign_in_ip"
+    t.datetime "created_at",                             :null => false
+    t.datetime "updated_at",                             :null => false
   end
+
+  add_index "users", ["email"], :name => "index_users_on_email", :unique => true
+  add_index "users", ["reset_password_token"], :name => "index_users_on_reset_password_token", :unique => true
 
 end

@@ -3,9 +3,9 @@
 <h2 align = "Center">Lista</h2>
 <table valign = "middle " align = "center" cellspacing = 6>
   <tr>
-    <th>Conteudo</th>
-    <th>Comentavel</th>
-    <th>Tipo Comentario</th>
+    <th><font size = 3>Conteudo</th>
+    <th><font size = 3>Comentavel</th>
+    <th><font size = 3>Tipo Comentario</th>
     <th></th>
     <th></th>
     <th></th>
@@ -13,17 +13,15 @@
 
 <% @comentarios.each do |comentario| %>
   <tr>
-    <td><%= comentario.conteudo %></td>
-    <td align = "center"><%= comentario.comentavel_id %></td>
-    <td align = "center"><%= comentario.comentavel_type %></td>
-    <td><%= link_to 'Mostrar', comentario %></td>
-    <td><%= link_to 'Editar', edit_comentario_path(comentario) %></td>
-    <td><%= link_to 'Deletar', comentario, method: :delete, data: { confirm: 'Você tem certeza?' } %></td>
+    <td><font size = 3><%= comentario.conteudo %></td>
+    <td align = "center"><font size = 3><%= comentario.comentavel_id %></td>
+    <td align = "center"><font size = 3><%= comentario.comentavel_type %></td>
+    <td><font size = 3><%= link_to 'Mostrar', comentario %></td>
+    <td><font size = 3><%= link_to 'Editar', edit_comentario_path(comentario) %></td>
+    <td><font size = 3><%= link_to 'Deletar', comentario, method: :delete, data: { confirm: 'Você tem certeza?' } %></td>
   </tr>
 <% end %>
 <td colspan = 5 align = "center"><br>
-<%= link_to 'Novo Comentario', new_comentario_path %>
+<font size = 3><%= link_to 'Novo Comentario', new_comentario_path %>
 </td>
 </table>
-
-<br><br><br>

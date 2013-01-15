@@ -1,29 +1,15 @@
 body {
-  background-color: #d8bfd8;
+  background-color: #fff;
   color: #333;
   font-family: verdana, arial, helvetica, sans-serif;
   font-size: 13px;
   line-height: 18px;
 }
-s
+
 p, ol, ul, td {
   font-family: verdana, arial, helvetica, sans-serif;
-  font-size: 14px;
+  font-size: 13px;
   line-height: 18px;
-}
-
-.cabecalho{
-  font-family: verdana, arial, helvetica, sans-serif;
-  font-size: 14px;
-  background: -moz-linear-gradient(bottom, #d8bfd8, #fff) repeat-X;
-  background: -webkit-gradient(linear, left bottom, left top, from(#d8bfd8), to(#9932cc)) repeat-X;
-}
-
-.rodape{
-  font-family: verdana, arial, helvetica, sans-serif;
-  font-size: 14px;
-  background: -moz-linear-gradient(top, #d8bfd8, #fff) repeat-X;
-  background: -webkit-gradient(linear, left top, left bottom, from(#d8bfd8), to(#9932cc)) repeat-X;
 }
 
 pre {
@@ -34,15 +20,12 @@ pre {
 
 a {
   color: #000;
-  text-decoration: none;
   &:visited {
-    color: #000fff;
+    color: #666;
   }
-  &:hover { -webkit-transition: 0.5s;
-    color: #855;
-    background-color: #d8bfd8;
-    -webkit-transition: 0.5s;
-    -moz-transition: 0.5s;
+  &:hover {
+    color: #fff;
+    background-color: #000;
   }
 }
 
@@ -82,145 +65,252 @@ div {
   ul li {
     font-size: 12px;
     list-style: square;
-
   }
 }
-.botaoCliente {
-display:block;
-width: 94px;
-height: 33px;
-text-valign:center;
-font:bold 14px verdana, arial, tahoma, sans-serif;
-text-decoration:none;
-color:black;
-border-width:10px;
--webkit-border-image: url(img/Cliente_Roxo.jpg) 10 stretch;
--moz-border-image: url(img/Cliente_Roxo.jpg) 10 stretch;
--o-border-image: url(img/Cliente_Roxo.jpg) 10 stretch;
+
+
+.header{
+  background-image: url(img/bgHeader.jpg);
+  width: 100%; 
+  height: 30%;
 }
 
-.botaoCliente:hover {
-display:block;
-width: 94px;
-height: 33px;
-text-valign:center;
-font:bold 14px verdana, arial, tahoma, sans-serif;
-text-decoration:none;
-color:black;
-border-width:10px;
--webkit-border-image: url(img/Cliente_Roxo_hover.jpg) 10 stretch;
--moz-border-image: url(img/Cliente_Roxo_hover.jpg) 10 stretch;
--o-border-image: url(img/Cliente_Roxo_hover.jpg) 10 stretch;
+.body{
+  background-image: url(img/bgBody.jpg);
 }
 
-.botaoQualific {
-display:block;
-width: 94px;
-height: 33px;
-text-valign:center;
-font:bold 14px verdana, arial, tahoma, sans-serif;
-text-decoration:none;
-color:black;
-border-width:10px;
--webkit-border-image: url(img/Qualific_Roxo.jpg) 10 stretch;
--moz-border-image: url(img/Qualific_Roxo.jpg) 10 stretch;
--o-border-image: url(img/Qualific_Roxo.jpg) 10 stretch;
+body{
+  background-color: #000;
 }
 
-.botaoQualific:hover {
-display:block;
-width: 94px;
-height: 33px;
-text-valign:center;
-font:bold 14px verdana, arial, tahoma, sans-serif;
-text-decoration:none;
-color:black;
-border-width:10px;
--webkit-border-image: url(img/Qualific_Roxo_hover.jpg) 10 stretch;
--moz-border-image: url(img/Qualific_Roxo_hover.jpg) 10 stretch;
--o-border-image: url(img/Qualific_Roxo_hover.jpg) 10 stretch;
+.footer{
+  background-image: url(img/bgFooter.jpg);
+  font-size: 14px;
+}
+
+.tabela{
+  -moz-border-radius: 50px; 
+  -webkit-border-radius: 50px;
+  border-radius:50px;
 }
 
 .botaoRest {
-display:block;
-width: 94px;
-height: 33px;
-text-valign:center;
-font:bold 14px verdana, arial, tahoma, sans-serif;
-text-decoration:none;
-color:black;
-border-width:10px;
--webkit-border-image: url(img/Restaurante_Roxo.jpg) 10 stretch;
--moz-border-image: url(img/Restaurante_Roxo.jpg) 10 stretch;
--o-border-image: url(img/Restaurante_Roxo.jpg) 10 stretch;
+  align:center;
+  display:block;
+  width: 134px;
+  height: 53px;
+  text-align:center;
+  font:bold 14px verdana, arial, tahoma, sans-serif;
+  text-decoration:none;
+  color:black;
+  border-width:10px;
+  -webkit-border-image: url(img/Restaurantes.gif) 10 stretch;
+  -moz-border-image: url(img/Restaurantes.gif) 10 stretch;
+  -o-border-image: url(img/Restaurantes.gif) 10 stretch;
 }
 
 .botaoRest:hover {
-display:block;
-width: 94px;
-height: 33px;
-text-valign:center;
-font:bold 14px verdana, arial, tahoma, sans-serif;
-text-decoration:none;
-color:black;
-border-width:10px;
--webkit-border-image: url(img/Restaurante_Roxo_hover.jpg) 10 stretch;
--moz-border-image: url(img/Restaurante_Roxo_hover.jpg) 10 stretch;
--o-border-image: url(img/Restaurante_Roxo_hover.jpg) 10 stretch;
+  display:block;
+  width: 134px;
+  height: 53px;
+  text-valign:center;
+  font:bold 14px verdana, arial, tahoma, sans-serif;
+  text-decoration:none;
+  color:black;
+  border-width:10px;
+  -webkit-border-image: url(img/Restaurantes_hover.gif) 10 stretch;
+  -moz-border-image: url(img/Restaurantes_hover.gif) 10 stretch;
+  -o-border-image: url(img/Restaurantes_hover.gif) 10 stretch;
+}
+
+.botaoQualific {
+  display:block;
+  width: 134px;
+  height: 53px;
+  text-valign:center;
+  font:bold 14px verdana, arial, tahoma, sans-serif;
+  text-decoration:none;
+  color:black;
+  border-width:10px;
+  -webkit-border-image: url(img/Qualif.gif) 10 stretch;
+  -moz-border-image: url(img/Qualif.gif) 10 stretch;
+  -o-border-image: url(img/Qualif.gif) 10 stretch;
+}
+
+.botaoQualific:hover {
+  display:block;
+  width: 134px;
+  height: 53px;
+  text-valign:center;
+  font:bold 14px verdana, arial, tahoma, sans-serif;
+  text-decoration:none;
+  color:black;
+  border-width:10px;
+  -webkit-border-image: url(img/Qualif_hover.gif) 10 stretch;
+  -moz-border-image: url(img/Qualif_hover.gif) 10 stretch;
+  -o-border-image: url(img/Qualif_hover.gif) 10 stretch;
+}
+
+.botaoCliente {
+  display:block;
+  width: 134px;
+  height: 53px;
+  text-valign:center;
+  font:bold 14px verdana, arial, tahoma, sans-serif;
+  text-decoration:none;
+  color:black;
+  border-width:10px;
+  -webkit-border-image: url(img/Clientes.gif) 10 stretch;
+  -moz-border-image: url(img/Clientes.gif) 10 stretch;
+  -o-border-image: url(img/Clientes.gif) 10 stretch;
+}
+
+.botaoCliente:hover {
+  display:block;
+  width: 134px;
+  height: 53px;
+  text-valign:center;
+  font:bold 14px verdana, arial, tahoma, sans-serif;
+  text-decoration:none;
+  color:black;
+  border-width:10px;
+  -webkit-border-image: url(img/Clientes_hover.gif) 10 stretch;
+  -moz-border-image: url(img/Clientes_hover.gif) 10 stretch;
+  -o-border-image: url(img/Clientes_hover.gif) 10 stretch;
 }
 
 .botaoComent {
-display:block;
-width: 94px;
-height: 33px;
-text-valign:center;
-font:bold 14px verdana, arial, tahoma, sans-serif;
-text-decoration:none;
-color:black;
-border-width:10px;
--webkit-border-image: url(img/Coment_Roxo.jpg) 10 stretch;
--moz-border-image: url(img/Coment_Roxo.jpg) 10 stretch;
--o-border-image: url(img/Coment_Roxo.jpg) 10 stretch;
+  display:block;
+  width: 134px;
+  height: 53px;
+  text-valign:center;
+  font:bold 14px verdana, arial, tahoma, sans-serif;
+  text-decoration:none;
+  color:black;
+  border-width:10px;
+  -webkit-border-image: url(img/Comentarios.gif) 10 stretch;
+  -moz-border-image: url(img/Comentarios.gif) 10 stretch;
+  -o-border-image: url(img/Comentarios.gif) 10 stretch;
 }
 
 .botaoComent:hover {
-display:block;
-width: 94px;
-height: 33px;
-text-valign:center;
-font:bold 14px verdana, arial, tahoma, sans-serif;
-text-decoration:none;
-color:black;
-border-width:10px;
--webkit-border-image: url(img/Coment_Roxo_hover.jpg) 10 stretch;
--moz-border-image: url(img/Coment_Roxo_hover.jpg) 10 stretch;
--o-border-image: url(img/Coment_Roxo_hover.jpg) 10 stretch;
+  display:block;
+  width: 134px;
+  height: 53px;
+  text-valign:center;
+  font:bold 14px verdana, arial, tahoma, sans-serif;
+  text-decoration:none;
+  color:black;
+  border-width:10px;
+  -webkit-border-image: url(img/Comentarios_hover.gif) 10 stretch;
+  -moz-border-image: url(img/Comentarios_hover.gif) 10 stretch;
+  -o-border-image: url(img/Comentarios_hover.gif) 10 stretch;
 }
 
 .pontaEsq {
-display:block;
-width: 200px;
-height: 150px;
-text-align:center;
-font:bold 14px verdana, arial, tahoma, sans-serif;
-text-decoration:none;
-color:black;
-border-width:10px;
--webkit-border-image: url(img/boi2.gif) 10 stretch;
--moz-border-image: url(img/boi2.gif) 10 stretch;
--o-border-image: url(img/boi2.gif) 10 stretch;
+  display:block;
+  width: 60%;
+  height: 100%;
+  text-valign:center;
+  font:bold 14px verdana, arial, tahoma, sans-serif;
+  text-decoration:none;
+  color:black;
+  border-width:10px;
+  -webkit-border-image: url(img/boi2.gif) 10 stretch;
+  -moz-border-image: url(img/boi2.gif) 10 stretch;
+  -o-border-image: url(img/boi2.gif) 10 stretch;
 }
 
 .pontaDir {
-display:block;
-width: 200px;
-height: 150px;
-text-align:center;
-font:bold 14px verdana, arial, tahoma, sans-serif;
-text-decoration:none;
-color:black;
-border-width:10px;
--webkit-border-image: url(img/boi.gif) 10 stretch;
--moz-border-image: url(img/boi.gif) 10 stretch;
--o-border-image: url(img/boi.gif) 10 stretch;
+  display:block;
+  width: 60%;
+  height: 100%;
+  text-valign:center;
+  font:bold 14px verdana, arial, tahoma, sans-serif;
+  text-decoration:none;
+  color:black;
+  border-width:10px;
+  -webkit-border-image: url(img/boi.gif) 10 stretch;
+  -moz-border-image: url(img/boi.gif) 10 stretch;
+  -o-border-image: url(img/boi.gif) 10 stretch;
+}
+
+.header_center {
+  display:block;
+  width: 100%;
+  height: 100%;
+  text-valign:center;
+  font:bold 14px verdana, arial, tahoma, sans-serif;
+  text-decoration:none;
+  color:black;
+  border-width:10px;
+  -webkit-border-image: url(img/H.gif) 10 stretch;
+  -moz-border-image: url(img/H.gif) 10 stretch;
+  -o-border-image: url(img/H.gif) 10 stretch;
+}
+
+.img1 {
+  display:block;
+  width: 120px;
+  height: 60px;
+  color:black;
+  border-width:10px;
+  -webkit-border-image: url(img/img1.jpg) 10 stretch;
+  -moz-border-image: url(img/img1.jpg) 10 stretch;
+  -o-border-image: url(img/img1.jpg) 10 stretch;
+}
+
+.img2 {
+  display:block;
+  width: 120px;
+  height: 60px;
+  color:black;
+  border-width:10px;
+  -webkit-border-image: url(img/img2.jpg) 10 stretch;
+  -moz-border-image: url(img/img2.jpg) 10 stretch;
+  -o-border-image: url(img/img2.jpg) 10 stretch;
+}
+
+.img3 {
+  display:block;
+  width: 120px;
+  height: 60px;
+  color:black;
+  border-width:10px;
+  -webkit-border-image: url(img/img3.jpg) 10 stretch;
+  -moz-border-image: url(img/img3.jpg) 10 stretch;
+  -o-border-image: url(img/img3.jpg) 10 stretch;
+}
+
+.img4 {
+  display:block;
+  width: 120px;
+  height: 60px;
+  color:black;
+  border-width:10px;
+  -webkit-border-image: url(img/img4.jpg) 10 stretch;
+  -moz-border-image: url(img/img4.jpg) 10 stretch;
+  -o-border-image: url(img/img4.jpg) 10 stretch;
+}
+
+.img5 {
+  display:block;
+  width: 120px;
+  height: 60px;
+  color:black;
+  border-width:10px;
+  -webkit-border-image: url(img/img5.jpg) 10 stretch;
+  -moz-border-image: url(img/img5.jpg) 10 stretch;
+  -o-border-image: url(img/img5.jpg) 10 stretch;
+}
+
+.img6 {
+  display:block;
+  width: 120px;
+  height: 60px;
+  color:black;
+  border-width:10px;
+  -webkit-border-image: url(img/img6.jpg) 10 stretch;
+  -moz-border-image: url(img/img6.jpg) 10 stretch;
+  -o-border-image: url(img/img6.jpg) 10 stretch;
 }
