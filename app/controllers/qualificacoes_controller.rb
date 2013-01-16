@@ -1,3 +1,4 @@
+#encoding:utf-8
 class QualificacoesController < ApplicationController
   before_filter :authenticate_user!, :except => [:index]
   # GET /qualificacoes
@@ -45,7 +46,7 @@ class QualificacoesController < ApplicationController
 
     respond_to do |format|
       if @qualificacao.save
-        format.html { redirect_to @qualificacao, notice: 'Qualificacao was successfully created.' }
+        format.html { redirect_to @qualificacao, notice: 'Qualificação criada com sucesso.' }
         format.json { render json: @qualificacao, status: :created, location: @qualificacao }
       else
         format.html { render action: "new" }
@@ -61,7 +62,7 @@ class QualificacoesController < ApplicationController
 
     respond_to do |format|
       if @qualificacao.update_attributes(params[:qualificacao])
-        format.html { redirect_to @qualificacao, notice: 'Qualificacao was successfully updated.' }
+        format.html { redirect_to @qualificacao, notice: 'Qualificação atualizada com sucesso.' }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }

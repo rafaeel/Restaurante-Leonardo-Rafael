@@ -1,5 +1,6 @@
+#encoding:utf-8
 class ComentariosController < ApplicationController
-  before_filter :authenticate_user!, :except => [:index]
+  before_filter :authenticate_user!, :except => [:index,:show]
   # GET /comentarios
   # GET /comentarios.json
   def index
@@ -45,7 +46,7 @@ class ComentariosController < ApplicationController
 
     respond_to do |format|
         @comentario.save
-        format.html { redirect_to @comentario, notice: 'Comentario postado com sucesso.' }
+        format.html { redirect_to @comentario, notice: 'Comentário postado com sucesso.' }
         format.xml { render :xml => @comentario, :status => :created, :location => @comentario }
         format.js
       end
@@ -59,7 +60,7 @@ class ComentariosController < ApplicationController
 
     respond_to do |format|
       if @comentario.update_attributes(params[:comentario])
-        format.html { redirect_to @comentario, notice: 'Comentario was successfully updated.' }
+        format.html { redirect_to @comentario, notice: 'Comentário atualizado com sucesso.' }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }

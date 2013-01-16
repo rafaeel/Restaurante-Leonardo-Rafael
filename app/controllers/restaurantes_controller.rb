@@ -3,7 +3,7 @@ class RestaurantesController < ApplicationController
   # GET /restaurantes
   # GET /restaurantes.json
   def index
-    @restaurantes = Restaurante.all
+    @restaurantes = Restaurante.order("nome").page(params['page'])
 
     respond_to do |format|
       format.html # index.html.erb
@@ -45,7 +45,7 @@ class RestaurantesController < ApplicationController
 
     respond_to do |format|
       if @restaurante.save
-        format.html { redirect_to @restaurante, notice: 'Restaurante was successfully created.' }
+        format.html { redirect_to @restaurante, notice: 'Restaurante criado com sucesso.' }
         format.json { render json: @restaurante, status: :created, location: @restaurante }
       else
         format.html { render action: "new" }
@@ -61,7 +61,7 @@ class RestaurantesController < ApplicationController
 
     respond_to do |format|
       if @restaurante.update_attributes(params[:restaurante])
-        format.html { redirect_to @restaurante, notice: 'Restaurante was successfully updated.' }
+        format.html { redirect_to @restaurante, notice: 'Restaurante atualizado com sucesso.' }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }

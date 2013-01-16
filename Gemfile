@@ -22,7 +22,10 @@ group :assets do
 end
 
 gem 'jquery-rails'
+gem 'paperclip'
 gem 'execjs'
+
+gem 'kaminari'
 
 
 # To use ActiveModel has_secure_password

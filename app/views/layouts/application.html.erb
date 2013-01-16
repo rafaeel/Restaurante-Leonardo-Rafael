@@ -8,6 +8,21 @@
 </head>
 <body>
     <table width=100% height=100% cellspacing = 0>
+      <tr>
+      <td class="header" colspan=3 align = "right">
+        <div id="user_nav">
+          <font><b>
+  <% if user_signed_in? %>
+    Conectado ao sistema como <%= current_user.email %>. Não é você?
+    <%= link_to "Sair", destroy_user_session_path, :method => :delete %>
+  <% else %>
+    <%= link_to "Registrar-se", new_user_registration_path %> ou <%= link_to "Fazer Login", new_user_session_path %>
+  <% end %>&nbsp;
+</b>
+</font>
+</div>
+      </td>
+    </tr>
     <tr>
       <td class="header" colspan=3>
         <table width=100% height=170px>
@@ -23,21 +38,6 @@
             </td>
           </tr>
         </table>
-      </td>
-    </tr>
-    <tr>
-      <td class="header" colspan=3 align = "center">
-        <div id="user_nav">
-          <font size=3px><b>
-  <% if user_signed_in? %>
-    Conectado ao sistema como <%= current_user.email %>. Não é você?
-    <%= link_to "Sair", destroy_user_session_path, :method => :delete %>
-  <% else %>
-    <%= link_to "Registrar-se", new_user_registration_path %> ou <%= link_to "Fazer Login", new_user_session_path %>
-  <% end %>
-</b>
-</font>
-</div>
       </td>
     </tr>
     <tr>

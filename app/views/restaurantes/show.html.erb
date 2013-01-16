@@ -24,6 +24,13 @@
          <%= @restaurante.especialidade %>
       </font>
 </p>
+
+<p align = "center">
+      <font size = 3> 
+         <b>Foto: </b> <br>
+         <%= image_tag @restaurante.foto.url (:medium) %>
+      </font>
+</p>
 <br>
 
 <%= link_to "Qualificar este restaurante",
