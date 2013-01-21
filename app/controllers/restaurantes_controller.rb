@@ -61,7 +61,7 @@ class RestaurantesController < ApplicationController
 
     respond_to do |format|
       if @restaurante.update_attributes(params[:restaurante])
-        format.html { redirect_to @restaurante, notice: 'Restaurante atualizado com sucesso.' }
+        format.html {redirect_to(action: "show")}
         format.json { head :no_content }
       else
         format.html { render action: "edit" }
@@ -77,7 +77,7 @@ class RestaurantesController < ApplicationController
     @restaurante.destroy
 
     respond_to do |format|
-      format.html { redirect_to restaurantes_url }
+      format.html { redirect_to(action: "index") }
       format.json { head :no_content }
     end
   end

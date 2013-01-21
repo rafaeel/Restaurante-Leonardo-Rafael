@@ -16,7 +16,7 @@
 <% @qualificacoes.each do |qualificacao| %>
   <tr>
     <td> <font size = 3> <%= qualificacao.cliente.nome %></td>
-    <td align = "center"> <font size = 3> <%= qualificacao.restaurante.nome %></td>
+    <td align = "center"> <font size = 3> <%= qualificacao.restaurante_id %></td>
     <td align = "center"> <font size = 3> <%= qualificacao.nota %></td>
     <td align = "center"> <font size = 3> <%= qualificacao.valor_gasto %></td>
     <td> <font size = 3> <%= link_to 'Mostrar', qualificacao %></td>
@@ -27,5 +27,5 @@
 </table>
 
 <br />
-
+  <%= paginate @qualificacoes%>
  <font size = 3> <%= link_to 'Nova Qualificação', new_qualificacao_path %>

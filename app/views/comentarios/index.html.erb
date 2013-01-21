@@ -22,6 +22,7 @@
   </tr>
 <% end %>
 <td colspan = 5 align = "center"><br>
+  <%= paginate @comentarios%>
 <font size = 3><%= link_to 'Novo Comentario', new_comentario_path %>
 </td>
 </table>

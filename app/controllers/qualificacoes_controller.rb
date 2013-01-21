@@ -4,8 +4,7 @@ class QualificacoesController < ApplicationController
   # GET /qualificacoes
   # GET /qualificacoes.json
   def index
-    @qualificacoes = Qualificacao.all
-
+    @qualificacoes = Qualificacao.order("nota").page(params['page'])
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @qualificacoes }
@@ -27,7 +26,13 @@ class QualificacoesController < ApplicationController
   # GET /qualificacoes/new.json
   def new
     @qualificacao = Qualificacao.new
-
+      if params[:cliente]
+        @qualificacao.cliente = Cliente.find(params[:cliente])
+      end
+      if params[:restaurante]
+        @qualificacao.restaurante = Restaurante.find(params[:restaurante])
+      end
+      
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @qualificacao }
